@@ -26,8 +26,6 @@ def main():
         if login():  # Verifica o login
             st.session_state.logged_in = True
     
-    if st.session_state.logged_in:
-        st.title("Meu Aplicativo Streamlit")
         
         # Conteúdo dinâmico da página
         page = st.sidebar.radio("Selecione uma página", ["Home", "Library", "Tutorials", "Development", "Download"])
