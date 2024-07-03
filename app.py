@@ -17,7 +17,14 @@ def login():
     return False
 
 def main():
-    logged_in = login()  # Verifica o login
+    # Variável de sessão para controlar se o usuário está logado ou não
+    logged_in = st.session_state.get('logged_in', False)
+    
+    if not logged_in:
+        logged_in = login()  # Verifica o login
+        
+        # Atualiza a variável de sessão com o status de login
+        st.session_state['logged_in'] = logged_in
     
     if logged_in:
         st.title("Meu Aplicativo Streamlit")
