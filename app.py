@@ -17,7 +17,9 @@ def login():
     return False
 
 def main():
-    if login():
+    logged_in = login()  # Verifica o login
+    
+    if logged_in:
         st.title("Meu Aplicativo Streamlit")
         
         # Conteúdo dinâmico da página
@@ -34,5 +36,4 @@ def main():
         elif page == "Download":
             st.write("Conteúdo da página Download")
 
-if __name__ == "__main__":
-    main()
+if __name
