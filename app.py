@@ -36,4 +36,5 @@ def main():
         elif page == "Download":
             st.write("Conteúdo da página Download")
 
-if __name
+if __name__ == "__main__":
+    main()
