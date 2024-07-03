@@ -27,6 +27,9 @@ def main():
         st.session_state['logged_in'] = logged_in
     
     if logged_in:
+        # Limpa a tela de login
+        st.empty()
+        
         st.title("Meu Aplicativo Streamlit")
         
         # Conteúdo dinâmico da página
